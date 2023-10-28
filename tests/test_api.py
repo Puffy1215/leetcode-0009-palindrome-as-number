@@ -6,13 +6,13 @@ from leetcode_0009_palindrome_number import api
 
 
 @pytest.mark.parametrize(
-    ["result", ...],
+    ["result", "x"],
     (
         [..., ...],
         [..., ...],
-    )
+    ),
 )
-def test_palindrome_number(result, ...) -> None:
+def test_palindrome_number(result: bool, x: int) -> None:
     """Tests solution for problem Palindrome Number"""
 
-    assert api.palindrome_number(...) == result
+    assert api.palindrome_number(x) == result
