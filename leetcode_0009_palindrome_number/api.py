@@ -1,7 +1,10 @@
 """API for solving problem Palindrome Number"""
 
-def _check_preconditions(...) -> bool:
-    pass
+X_MAX = 2**31 - 1
+X_MIN = -(2**31)
+
+def _check_preconditions(x: int) -> bool:
+    return X_MIN <= x <= X_MAX
 
 
 def palindrome_number(...) -> ...:
