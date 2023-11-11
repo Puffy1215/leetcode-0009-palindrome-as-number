@@ -1,6 +1,7 @@
 """API for solving problem Palindrome Number"""
 
 import math
+from typing import cast
 
 X_MAX = 2**31 - 1
 X_MIN = -(2**31)
@@ -15,7 +16,7 @@ def _digits(x: int) -> int:
 
 
 def _get_digit(x: int, i: int) -> int:
-    return abs(x // 10**i) % 10
+    return cast(int, abs(x // 10**i)) % 10
 
 
 def palindrome_number(x: int) -> bool:
