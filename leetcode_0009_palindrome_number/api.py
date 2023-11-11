@@ -14,6 +14,10 @@ def _digits(x: int) -> int:
     return math.floor(math.log10(abs(x)) + 1) if x else 1
 
 
+def _get_digit(x: int, i: int) -> int:
+    return abs(x // 10**i) % 10
+
+
 def palindrome_number(x: int) -> bool:
     """Solves problem Palindrome Number"""
 
