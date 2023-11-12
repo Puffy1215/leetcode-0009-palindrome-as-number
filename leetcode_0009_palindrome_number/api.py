@@ -24,4 +24,15 @@ def palindrome_number(x: int) -> bool:
 
     assert _check_preconditions(x)
 
-    pass
+    if x < 0:
+        return False
+
+    l = _digits(x)
+    for i in range(l // 2):
+        j = l - (i + 1)
+        lhs = _get_digit(x, i)
+        rhs = _get_digit(x, j)
+        if lhs != rhs:
+            return False
+
+    return True
